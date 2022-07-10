@@ -1,0 +1,26 @@
+------------ Options -------------
+Arc_path: arcface_model/arcface_checkpoint.tar
+Gdeep: False
+batchSize: 4
+beta1: 0.0
+checkpoints_dir: ./checkpoints
+continue_train: False
+dataset: /path/to/VGGFace2
+gpu_ids: 0
+isTrain: True
+lambda_feat: 10.0
+lambda_id: 30.0
+lambda_rec: 10.0
+load_pretrain: ./checkpoints/simswap224_test
+log_frep: 200
+lr: 0.0004
+model_freq: 10000
+name: simswap
+niter: 10000
+niter_decay: 10000
+phase: train
+sample_freq: 1000
+total_step: 1000000
+use_tensorboard: False
+which_epoch: 10000
+-------------- End ----------------
