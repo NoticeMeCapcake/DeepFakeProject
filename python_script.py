@@ -2,12 +2,6 @@ import configargparse
 import os
 import shutil
 
-# ПРИМЕР КАК НАДО ЗАПИСАТЬ ЦЕЛИ!!!!!!!!!
-# ГДЕ ПИСАТЬ ЦЕЛИ? ГДЕ И ПРИМЕРНО ЧТО ЗАПИСАТЬ НАПИСАНО В БОЛЬШИХ КОММЕНТАРИЯХ (Т.Е. МЕЖДУ КАВЫЧКАМИ)
-
-# os.system('make hello')
-
-
 """
 Как пользоваться?
 На вход: можно указать 3 тэга, для каждого тега нужно указать свои параметры. 
@@ -17,10 +11,10 @@ import shutil
 ВНИМАНИЕ! Если вы укажете и файл конфигурации, и параметры, то прога работать будет с параметрами из консоли.
 Но лучше так не делать.
 
-На выход: если вы не лохи и мы не лохи, то завершится все успешно и в папочке /home/user/result будут папки с
-картинкой/видео, смотря че ввели
+На выход: при успешном выполнении в папке /home/user/result будут папки с
+картинкой/видео, смотря что ввели
 
-Успехов! ДАНЯ!!! Ни нада ниче менять без спроса)))
+Успехов!
 """
 
 def create_makedirs(old_directory: str):
@@ -104,7 +98,6 @@ if args[0].prev is True:
     1. make цель отвечающая за GPEN
 
     """
-    os.system('make run_prev')
 
     #go to result
     shutil.copy(temp_image_path_name, result_image_path_name)
@@ -163,7 +156,6 @@ if args[0].proc is True:
     4. make цель отвечающая за bash-script соединения звука и видео
 
     """
-    os.system('make run_proc')
 
     #go to result
     shutil.copy(temp_video_path_name, result_path_name + 'video/result_' + name_video_without_path)
@@ -212,7 +204,6 @@ if args[0].post is True:
     4. make цель отвечающая за bash-script соединение звука и видео
 
     """ 
-    os.system('make run_post')
 
     #go to result
     shutil.copy(temp_video_path_name, result_path_name + 'video/result_' + name_video_without_path)
